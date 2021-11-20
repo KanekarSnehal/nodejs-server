@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-server",
+  "version": "1.0.0",
+  "description": "complete nodejs guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "start-server": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KanekarSnehal/nodejs-server.git"
+  },
+  "author": "Snehal Kanekar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KanekarSnehal/nodejs-server/issues"
+  },
+  "homepage": "https://github.com/KanekarSnehal/nodejs-server#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -47,5 +47,5 @@ res.end();
 module.exports.handler=requestHandler;
 module.exports.someText='Some hard coded text';
 
-// module.handler=requestHandler;
-// module.someText='Some hard coded text';
+// exports.handler=requestHandler;
+//exports.someText='Some hard coded text';
