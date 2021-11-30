@@ -1,21 +1,24 @@
-// const http = require('http');
+
+const path=require('path');
+
+
 const express=require('express');
 const bodyParser=require('body-parser');
 const app=express();
+
+app.use(express.static(path.join(__dirname,'public')));
+
 const adminRoutes=require("./routes/admin");
 const shopRoutes=require("./routes/shop");
-app.use('/admin',adminRoutes);
-app.use(shopRoutes);
+const { join } = require('path');
+
 app.use(bodyParser.urlencoded({extended:false}));
 
-// app.use('/',(req,res,next)=>{
-//     console.log("this always runs");
-//     // res.send('<h1>hello</h1>');
-//     next();
-// })
+app.use('/admin',adminRoutes);
+app.use(shopRoutes);
 
-// const server=http.createServer(app);
 app.use((req,res,next)=>{
-    res.status(404).send('<h1>Page not found</h1>');
-})
+    res.status(404).sendFile(path.join(__dirname,'views','404.html'));
+});
+
 app.listen(4000);
