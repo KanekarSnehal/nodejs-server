@@ -44,25 +44,26 @@ main{
     color: rgb(59, 31, 151);
 }
 
-.product-form{
+.contact-us-form{
     width: 20rem;
     max-width: 90%;
     margin: auto;
 }
 
-
+.form-control{
+    margin: 0rem;
+}
 .form-control label,
 .form-control input{
     display: block;
     width: 100%;
-    margin: 1rem;
-    
+   
 }
 
 .form-control input{
     border: 1px solid #1dc7d3;
     font: inherit;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 button{
@@ -72,6 +73,7 @@ button{
     border-radius: 3px;
     color: blue;
     cursor: pointer;
+    margin: 1rem;
 }
 
 button:hover,
