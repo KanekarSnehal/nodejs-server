@@ -1,5 +1,5 @@
  
-const products = [];
+const Product=require('../models/product');
 
 const rootDir=require('../util/path');
 const path=require('path');
@@ -10,9 +10,15 @@ exports.getAddProduct=(req,res,next)=>{
 
 
 exports.postAddProduct=(req,res,next)=>{
+        const product= new Product(req.body.title);
+        product.save();
         res.redirect('/');
 };
 
 exports.getProducts=(req, res, next) => {
+        const products=Product.fetchAll((products)=>{
+                
+        });
+        console.log(products);
         res.sendFile(path.join(rootDir, 'views', 'shop.html'));
 };
