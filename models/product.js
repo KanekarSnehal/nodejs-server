@@ -30,9 +30,6 @@ module.exports = class Product {
                 console.log(err);
             });
         });
-        fs.readFile(p, (err, data) => {
-            let products = [];
-        });
     }
 
     static fetchAll(cb) {
